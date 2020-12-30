@@ -1,0 +1,54 @@
+
+#include <iostream>
+using namespace std;
+
+/*
+ A liter is 0.264179 gallons. Write a program that will read in the number
+ of liters of gasoline consumed by the user’s car and the number of miles
+ traveled by the car and will then output the number of miles per gallon the
+ car delivered. Your program should allow the user to repeat this calculation
+ as often as the user wishes. Define a function to compute the number of
+ miles per gallon. Your program s
+ */
+
+double mpg (int miles, int litre);
+const double one_gallon = 0.264179;
+
+int main()
+{
+    string decision;
+
+    do
+    {
+
+
+   
+    
+    double input_litre,miles_traveled;
+    
+    cout <<"How man litres of gasoline the car consumed?:";
+    cin>>input_litre;
+    
+    cout<<"How many did the car traveled?: ";
+    cin>>miles_traveled;
+    
+    
+    
+    cout<<"The total miles per gallon = "<<mpg(miles_traveled, input_litre)<<endl;  //The function takes in the input from the user and prints out the totlal miles per gallon.
+        
+        cout<<"Do you wish to continue: ";
+        cin>>decision;
+        
+    }while (decision == "yes" || decision =="YES");
+    return 0;
+    
+}
+
+// The function below calculated the miles per gallon based on the input provided by the user.
+
+double mpg (int miles, int litre)
+{
+    double calculate;
+    calculate = litre * one_gallon;
+    return (miles/calculate);
+}

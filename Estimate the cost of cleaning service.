@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+/* This program estimates the cost of cleaning service*/
+
+int main()
+{
+    const double price_smallRooms = 25;
+    const double price_largeRooms = 35;
+    const double Taxes = 0.06;
+    
+    double sum_of_smallRooms=0, sum_of_largeRooms=0;
+    
+    
+    std::cout<<"Hey, welcome to Frank's Carpet Cleaning Service"<<std::endl;
+    
+    std::cout<<"\n How many small rooms would you like to clean? ";
+    int small_rooms=0;
+    std::cin>>small_rooms;
+    
+    std::cout<<"\n How many large rooms would you like to clean? ";
+    int large_rooms=0;
+    std::cin>>large_rooms;
+    
+    std::cout<<"Below are the estimates for the carpet service"<<std::endl;
+    
+    std::cout<<"Number of small rooms: "<<small_rooms<<std::endl;
+    std::cout<<"Number of large rooms: "<<large_rooms<<std::endl;
+    
+    std::cout<<"Price per small rooms: "<<price_smallRooms<<std::endl;
+    std::cout<<"Price per large rooms: "<<price_largeRooms<<std::endl;
+    
+    sum_of_smallRooms = price_smallRooms * small_rooms;
+    sum_of_largeRooms = price_largeRooms * large_rooms;
+    
+
+    std::cout<<"Cost: "<< sum_of_smallRooms + sum_of_largeRooms<<std::endl;
+    std::cout<<"Tax: "<< (sum_of_smallRooms + sum_of_largeRooms) * Taxes <<std::endl;
+    
+    std::cout<<"============================================"<<std::endl;
+    double estimate = ((sum_of_smallRooms + sum_of_largeRooms) * Taxes) + (sum_of_smallRooms + sum_of_largeRooms);
+    std::cout<<"Total estimate: "<<estimate<<std::endl;
+    std::cout<<"This estimate is valid  for 30 days"<<std::endl;
+
+    
+    
+    
+}
